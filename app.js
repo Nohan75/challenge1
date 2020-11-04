@@ -2,6 +2,7 @@ const myButton = document.querySelectorAll('button');
 const selectBody = document.querySelector('body.transition');
 const errorPage = document.querySelector('div.error-page');
 const back = document.querySelector('.back');
+const txtError = document.querySelector('.txt-error');
 
 myButton.forEach(button => {
     button.addEventListener('click', () => {
@@ -11,11 +12,11 @@ myButton.forEach(button => {
                 break;
             case 'second':
                 errorPage.classList.add('error');
-                errorPage.removeAttribute('hidden');
+                back.removeAttribute('hidden');
+                txtError.removeAttribute('hidden');
                 break;
-            case 'third':
-                console.log('Bouton 3');
-                break;
+
+
         }
     });
 });
@@ -23,4 +24,5 @@ myButton.forEach(button => {
 back.addEventListener('click', () => {
     errorPage.classList.remove('error');
     errorPage.setAttribute('hidden', '');
+    txtError.setAttribute('hidden', '');
 });
