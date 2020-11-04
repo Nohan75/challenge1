@@ -1,0 +1,129 @@
+*, ::before, ::after{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+html{
+    overflow: hidden;
+}
+body{
+    background: url('usaFlag.jpg') no-repeat;
+    max-height: 100vh;
+    width: 100%;
+    font-family: 'Lato';
+    display: flex;
+}
+
+.left {
+    width: 50%;
+    height: 100vh;
+    text-align: center;
+}
+.left img{
+    width: 90%;
+    margin: 0 auto;
+}
+.progress-bar{
+    margin: 30px;
+    text-align: left;
+}
+.progress-bar i{
+    display: inline;
+    height: 60px;
+    font-size: 50px;
+    background-color: #000000;
+    border-radius: 50%;
+    color: yellow;
+    padding: 12px;
+    text-align: left;
+}
+.progress-container{
+    width: 50%;
+    height: 40px;
+    background-color: #777777;
+    border-radius: 35px;
+    margin: 20px 0;
+}
+.progress-container .progress-content{
+    height: 100%;
+    width: 85%;
+    background-color: green;
+    border-radius: 35px 0 0 35px;
+    padding: 10px 0 0 40px;
+}
+.txt-progress{
+    font-weight: bold;
+}
+.right{
+    width: 50%;
+    text-align: center;
+}
+.card{
+    width: 70%;
+    height: 800px;
+    background-color: #c3c3c3;
+    border-radius: 20px;
+    margin: 60px auto;
+    padding: 10px;
+    text-align: center;
+}
+.card i{
+    display: inline;
+    font-size: 100px;
+    color: rgb(192, 5, 5);
+}
+.card img {
+    width: 20%;
+}
+.list-button{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.list-button button {
+    margin-top: 15px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.rotate{
+    animation-duration: 1s;
+    animation-name: Rotate;
+    animation-fill-mode: forwards;
+}
+
+@keyframes Rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+}
+
+.error{
+    display: block;
+    position: absolute;
+    background-color: black !important;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+}
+.error p.txt-error{
+    text-align: center;
+    margin-top: 15%;
+    font-size: 80px;
+}
+.error .back{
+    color: green;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 840px){
+    body{
+        flex-direction: column;
+        height: 100%;
+    }
+    .right{
+        margin: 0 auto;
+    }
+}
